@@ -1,4 +1,3 @@
-rm(list=ls())
 setwd("/Users/katherinefranz/Desktop/IBC_Exercise_08")
 #Exercise 8: Using Control Structures in R 
 
@@ -47,7 +46,7 @@ legend(5, 40, legend=c("UW", "MSU"),
 
 # generate random number 1-100
 mynumber <- sample(1:100,1)
-mynumber
+
 cat("I'm thinking of a number 1-100...","\n")
 
 #ask user for guess input 
@@ -55,6 +54,7 @@ yourguess<-readline(cat("Guess: "))
 #convert string guess into an integer 
 yourguess <-as.integer(yourguess)
 
+# respond to incorrect guesses 
 while (yourguess != mynumber) {
   if (yourguess > mynumber){
     cat("Lower","\n")
@@ -67,6 +67,7 @@ while (yourguess != mynumber) {
     yourguess <-as.integer(yourguess)
   }
 }
+#respond to correct guess
 cat("Correct!")
 
 
